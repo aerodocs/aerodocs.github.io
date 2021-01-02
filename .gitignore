@@ -4,3 +4,5 @@ _site
 .jekyll-metadata
 vendor
 Gemfile
+_config_local.yml
+*.bat
