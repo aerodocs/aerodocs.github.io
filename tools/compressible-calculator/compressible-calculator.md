@@ -38,35 +38,52 @@ Information about isentropic flow relations.
     <input type="number" id="p_p0" name="p_p0" min="0" step="0.1">
 </label>
 
-<div class="code-example" markdown="1">
-Python:
+{% tabs isentrop %}
 
+{% tab isentrop python %}
 ```python
 import math
 
-mach_number = 2.0
+M = 2.0  # Mach Number
 
-mach_angle = math.asin(1 / mach_number)
+mach_angle = math.degrees(math.asin(1 / M))
+print(f'The Mach angle at M = { M } is { mach_angle } degrees.')
 ```
-</div>
+{% endtab %}
 
-<ul id="profileTabs" class="nav nav-tabs">
-    <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-    <li><a href="#about" data-toggle="tab">About</a></li>
-    <li><a href="#match" data-toggle="tab">Match</a></li>
-</ul>
-  <div class="tab-content">
-<div role="tabpanel" class="tab-pane active" id="profile">
-    <h2>Profile</h2>
-<p>Praesent sit amet fermentum leo....</p>
-</div>
+{% tab isentrop js %}
+```javascript
+var M = 2.0;  // Mach Number
 
-<div role="tabpanel" class="tab-pane" id="about">
-    <h2>About</h2>
-    <p>Lorem ipsum ...</p></div>
+mach_angle = Math.asin(1 / M) * 180 / Math.PI;
+console.log('The Mach angle at M = ' + M + ' is ' + mach_angle + ' degrees.');
+```
+{% endtab %}
 
-<div role="tabpanel" class="tab-pane" id="match">
-    <h2>Match</h2>
-    <p>Vel vehicula ....</p>
-</div>
-</div>
+{% tab isentrop MATLAB %}
+```matlab
+M = 2.0;  % Mach Number
+
+mach_angle = asind(1 / M);
+fprintf('The Mach angle at M = %f is %f degrees.', M, mach_angle)
+```
+{% endtab %}
+
+{% tab isentrop C++ %}
+```cpp
+#include <stdio.h>      /* printf */
+#include <math.h>       /* asin */
+
+#define PI 3.14159265
+
+int main ()
+{
+  double M = 0.5;  // Mach Number
+  double mach_angle = asin(1 / M) * 180.0 / PI;
+  printf ("The Mach angle at M = %f is %f degrees.\n", M, mach_angle);
+  return 0;
+}
+```
+{% endtab %}
+
+{% endtabs %}

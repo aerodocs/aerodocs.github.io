@@ -1,0 +1,26 @@
+ul.tab,
+ul.tab-content {
+    padding-left: 0;
+}
+
+ul.tab>li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+ul.tab-content {
+    margin-top: -2.5rem;
+}
+
+ul.tab-content>li {
+    display: none;
+}
+
+ul.tab-content>li.active {
+    display: list-item;
+}
+
+ul.tab>li:before,
+ul.tab-content>li:before {
+    content: '';
+}

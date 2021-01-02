@@ -1,0 +1,18 @@
+<div class="tab-wrapper">
+    <ul class="tab">
+    <% environment["tabs-#{@name}"].each_with_index do |(key, value), index| %>
+        <li<%= index == 0 ? ' class="active"' : ''%>>
+            <a href="#" onclick="var c = document.getElementById('tab-<%= uuid %>'); c.querySelector('.active').classList.remove('active'); c.querySelector('#<%= key.gsub('+', 'plus') %>-<%= uuid %>').classList.add('active'); return false">
+                <div class="highlighter-rouge">
+                    <%= key %>
+                </div>
+            </a>
+        </li>
+    <% end %>
+    </ul>
+    <ul class="tab-content" id="tab-<%= uuid %>">
+    <% environment["tabs-#{@name}"].each_with_index do |(key, value), index| %>
+        <li id="<%= key.gsub('+', 'plus') %>-<%= uuid %>"<%= index == 0 ? ' class="active"' : ''%>><%= value %></li>
+    <% end %>
+    </ul>
+</div>
