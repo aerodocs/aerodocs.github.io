@@ -1,0 +1,5 @@
+{% unless tabs %}
+    {% assign tabs = "" | split: ',' %}
+{% endunless %}
+
+{% assign tabs = tabs | push: include %}

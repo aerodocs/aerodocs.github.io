@@ -1,0 +1,25 @@
+<div class="tab-wrapper">
+    <ul class="tab">
+        {% for tab in tabs %}
+        <li{% if forloop.first %} class="active"{% endif %}>
+            <a href="#" onclick="var c = this.parentElement.parentElement.parentElement;
+                c.querySelector('.active').classList.remove('active');
+                c.querySelector('.active').classList.remove('active');
+                this.classList.add('active');
+                c.querySelector('[name={{ tab.name | replace: '+', '_' }}]').classList.add('active');
+                return false">
+                <div class="highlighter-rouge">
+                    {{ tab.name }}
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <ul class="tab-content">
+        {% for tab in tabs %}
+        <li name="{{ tab.name | replace: '+', '_' }}"{% if forloop.first %} class="active"{% endif %}>
+            {% include filewrapper.md file=tab.file type=tab.type %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
