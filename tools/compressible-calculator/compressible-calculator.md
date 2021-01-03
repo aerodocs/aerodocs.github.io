@@ -4,7 +4,7 @@ title: Compressible Aerodynamics Calculator
 nav_order: 3
 description: "Compressible Aerodynamics Calculator"
 permalink: /compressible-calculator
-
+mathjax: true
 ---
 
 # Compressible Aerodynamics Calculator
@@ -19,24 +19,42 @@ This calculator is based on Virginia Tech's [Compressible Aerodynamics Calculato
 
 Information about isentropic flow relations.
 
-<label for="gamma">Gamma
-    <input type="number" id="gamma" name="gamma" value="1.4" min="1.01" step="0.01">
-</label>
-<br><label for="machnumber">Mach Number
-    <input type="number" id="machnumber" name="machnumber" min="0" step="0.1">
-</label>
-<br>
-<label for="machangle">Mach Angle
-    <input type="number" id="machangle" name="machangle" min="0" step="0.1">
-</label>
-<br>
-<label for="pmangle">P-M Angle
-    <input type="number" id="pmangle" name="pmangle" min="0" step="0.1">
-</label>
-<br>
-<label for="p_p0">P/P0
-    <input type="number" id="p_p0" name="p_p0" min="0" step="0.1">
-</label>
+<div class="calculator">
+    <label for="gamma">${\gamma}$ =
+        <input type="number" id="gamma" name="gamma" value="1.4" min="1.01" step="0.01">
+    </label>
+    <br>
+    <label for="machnumber">$M$ =
+        <input type="number" id="machnumber" name="machnumber" min="0" step="0.1">
+    </label>
+    <label for="machangle">${\mu}$ =
+        <input type="number" id="machangle" name="machangle" min="0" step="0.1">
+    </label>
+    <label for="pmangle">${\nu}$ =
+        <input type="number" id="pmangle" name="pmangle" min="0" step="0.1">
+    </label>
+    <label for="p_p0">$\frac{p}{p_0}$ =
+        <input type="number" id="p_p0" name="p_p0" min="0" step="0.1">
+    </label>
+    <label for="rho_rho0">$\frac{\rho}{\rho_0}$ =
+        <input type="number" id="rho_rho0" name="rho_rho0" min="0" step="0.1">
+    </label>
+    <label for="T_T0">$\frac{T}{T_0}$ =
+        <input type="number" id="T_T0" name="T_T0" min="0" step="0.1">
+    </label>
+    <label for="p_pstar">$\frac{p}{p*}$ =
+        <input type="number" id="p_pstar" name="p_pstar" min="0" step="0.1">
+    </label>
+    <label for="rho_rhostar">$\frac{\rho}{\rho*}$ =
+        <input type="number" id="rho_rhostar" name="rho_rhostar" min="0" step="0.1">
+    </label>
+    <label for="T_Tstar">$\frac{T}{T*}$ =
+        <input type="number" id="T_Tstar" name="T_Tstar" min="0" step="0.1">
+    </label>
+    <label for="A_Astar">$\frac{A}{A*}$ =
+        <input type="number" id="A_Astar" name="A_Astar" min="0" step="0.1">
+    </label>
+</div>
 
 {% include addtab.html name="python" file="isentropic_flow.py" type="python" %}
 {% include addtab.html name="js" file="isentropic_flow.js" type="javascript" %}
