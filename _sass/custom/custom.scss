@@ -10,8 +10,30 @@ ul.tab>li {
     margin-right: 4px;
 }
 
+ul.tab .tab-selector {
+	position: relative;
+	padding: $sp-2 $sp-3;
+}
+
+ul.tab .tab-selector:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+	border-radius: $border-radius;
+	background-color: $code-background-color;
+	opacity: 0.6;
+	z-index: -1;
+}
+
+ul.tab .active .tab-selector:before {
+    opacity: 1.0;
+}
+
 ul.tab-content {
-    margin-top: -2.5rem;
+    margin-top: -1.5rem;
 }
 
 ul.tab-content>li {
@@ -32,15 +54,18 @@ ul.tab-content>li:before {
 .calculator label {
     display: inline-block;
 	padding: $sp-1;
-	margin-bottom: $sp-3;
 	background-color: $code-background-color;
 	border-radius: $border-radius;
+	width: 7rem;
+	height: 2.25rem;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .calculator input {
 	border: 0;
 	background: none;
-	width: $sp-10;
+	width: 4.75rem;
 }
 
 /* Chrome, Safari, Edge, Opera */
