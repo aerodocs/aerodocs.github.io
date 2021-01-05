@@ -42,20 +42,21 @@ Information about isentropic flow relations.
     <label for="T_T0">\( \frac{T}{T_0} \) =
         <input type="number" id="T_T0" name="T_T0" min="0" step="0.1">
     </label>
-    <label for="p_pstar">\( \frac{p}{p*} \) =
+    <label for="p_pstar">\( \frac{p}{p^*} \) =
         <input type="number" id="p_pstar" name="p_pstar" min="0" step="0.1">
     </label>
-    <label for="rho_rhostar">\( \frac{\rho}{\rho*} \) =
+    <label for="rho_rhostar">\( \frac{\rho}{\rho^*} \) =
         <input type="number" id="rho_rhostar" name="rho_rhostar" min="0" step="0.1">
     </label>
-    <label for="T_Tstar">\( \frac{T}{T*} \) =
+    <label for="T_Tstar">\( \frac{T}{T^*} \) =
         <input type="number" id="T_Tstar" name="T_Tstar" min="0" step="0.1">
     </label>
-    <label for="A_Astar">\( \frac{A}{A*} \) =
+    <label for="A_Astar">\( \frac{A}{A^*} \) =
         <input type="number" id="A_Astar" name="A_Astar" min="0" step="0.1">
     </label>
 </div>
 
+{% include addtab.html name="Equations" file="isentropic_flow_equations.md" type="equations" %}
 {% include addtab.html name="python" file="isentropic_flow.py" type="python" %}
 {% include addtab.html name="js" file="isentropic_flow.js" type="javascript" %}
 {% include addtab.html name="MATLAB" file="isentropic_flow.m" type="matlab" %}
