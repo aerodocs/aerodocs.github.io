@@ -6,3 +6,4 @@ vendor
 Gemfile
 _config_local.yml
 *.bat
+.idea
