@@ -52,20 +52,32 @@ ul.tab-content>li:before {
 
 /*** Forms ***/
 .calculator label {
-    display: inline-block;
+    display: inline-flex;
+    align-items: baseline;
 	padding: $sp-1;
 	background-color: $code-background-color;
 	border-radius: $border-radius;
-	width: 7rem;
+	width: calc(16.667% - 4px);
+	min-width: 7rem;
 	height: 2.25rem;
-	overflow: hidden;
-	white-space: nowrap;
+	margin-bottom: .3em;
+}
+.calculator label>* {
+    margin-left: $sp-1;
+    margin-right: $sp-1;
+}
+.calculator label>*:first-child {
+    margin-left: 0;
+}
+.calculator label>*:last-child {
+    margin-right: 0;
 }
 
 .calculator input {
 	border: 0;
 	background: none;
-	width: 4.75rem;
+	width: 100%;
+	padding-bottom: .2em;
 }
 
 /* Chrome, Safari, Edge, Opera */
